@@ -1,0 +1,5 @@
+template poms: 'csap-package-httpd-uber/pom.xml',
+    enableParentVersion: true,
+    enableVersion: true,
+    enableTag: true,
+    defaultTag: 'csap-package-httpd-uber'

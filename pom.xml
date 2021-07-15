@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <artifactId>csap-package-secondary-parent</artifactId>
+    <version>2-SNAPSHOT</version>
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <groupId>org.csap</groupId>
+
+
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>csap secondary parentpom</description>
+    <url>https://github.com/csap-platform/csap-core/wiki</url>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.1.2</version>
+                    <executions>
+                        <execution>
+                            <id>copy</id>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>copy</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+					<version>3.3.0</version>
+                    <configuration>
+                        <attach>true</attach>
+                        <appendAssemblyId>false</appendAssemblyId>
+                        <descriptors>
+                            <descriptor>assembly.xml</descriptor>
+                        </descriptors>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>csap-release-repo</id>
+            <url>${csapReleaseUrl}</url>
+            <!--url>http://moc-artifactory.lab.sensus.net/artifactory/csap-release/</url -->
+        </repository>
+
+        <snapshotRepository>
+            <id>csap-snapshot-repo</id>
+            <url>${csapSnapUrl}</url>
+            <!--url>http://moc-artifactory.lab.sensus.net/artifactory/csap-snapshots/</url -->
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

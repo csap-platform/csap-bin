@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <parent>
+        <groupId>org.csap</groupId>
+        <artifactId>csap-package-secondary-parent</artifactId>
+        <version>2-SNAPSHOT</version>
+        <relativePath>../../csap-package-secondary-parent/</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <artifactId>csap-package-tomcat-secondary</artifactId>
+    <version>2-SNAPSHOT</version>
+
+
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>csap java secondary</description>
+    <url>https://github.com/csap-platform/csap-core/wiki</url>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                    <artifactItems>
+                        <artifactItem>
+                            <groupId>bin</groupId>
+                            <artifactId>tomcat</artifactId>
+                            <version>9.0.20</version>
+                            <type>tar.gz</type>
+                            <outputDirectory>${project.build.directory}/csap-package-tomcat.secondary/tom9</outputDirectory>
+                            <destFileName>apache-tomcat-9.0.20.tar.gz</destFileName>
+                        </artifactItem>
+                        <artifactItem>
+                            <groupId>org.apache.tomcat</groupId>
+                            <artifactId>tomcat-catalina-jmx-remote</artifactId>
+                            <version>9.0.10</version>
+                            <outputDirectory>${project.build.directory}/csap-package-tomcat.secondary/tom9</outputDirectory>
+                            <destFileName>catalina-jmx-remote.jar</destFileName>
+                        </artifactItem>
+
+	
+<!--                         <artifactItem>
+                            <groupId>bin</groupId>
+                            <artifactId>tomcat</artifactId>
+                            <version>8.5.16</version>
+                            <type>tar.gz</type>
+                            <outputDirectory>${project.build.directory}/csap-package-tomcat.secondary/tom8.5</outputDirectory>
+                            <destFileName>apache-tomcat-8.5.16.tar.gz</destFileName>
+                        </artifactItem>
+                        
+                        <artifactItem>
+                            <groupId>org.apache.tomcat</groupId>
+                            <artifactId>tomcat-catalina-jmx-remote</artifactId>
+                            <version>8.5.4</version>
+                            <outputDirectory>${project.build.directory}/csap-package-tomcat.secondary/tom8.5</outputDirectory>
+                            <destFileName>catalina-jmx-remote.jar</destFileName>
+                        </artifactItem>
+
+
+                        <artifactItem>
+                            <groupId>bin</groupId>
+                            <artifactId>tomcat</artifactId>
+                            <version>8.0.35</version>
+                            <type>tar.gz</type>
+                            <outputDirectory>${project.build.directory}/csap-package-tomcat.secondary/tom8</outputDirectory>
+                            <destFileName>apache-tomcat-8.0.35.tar.gz</destFileName>
+                        </artifactItem>
+                        <artifactItem>
+                            <groupId>org.apache.tomcat</groupId>
+                            <artifactId>tomcat-catalina-jmx-remote</artifactId>
+                            <version>8.0.32</version>
+                            <outputDirectory>${project.build.directory}/csap-package-tomcat.secondary/tom8</outputDirectory>
+                            <destFileName>catalina-jmx-remote.jar</destFileName>
+                        </artifactItem>
+
+
+                        <artifactItem>
+                            <groupId>bin</groupId>
+                            <artifactId>tomcat</artifactId>
+                            <version>7.0.68</version>
+                            <type>tar.gz</type>
+                            <outputDirectory>${project.build.directory}/csap-package-tomcat.secondary/tom7</outputDirectory>
+                            <destFileName>apache-tomcat-7.0.68.tar.gz</destFileName>
+                        </artifactItem>
+                        <artifactItem>
+                            <groupId>org.apache.tomcat</groupId>
+                            <artifactId>tomcat-catalina-jmx-remote</artifactId>
+                            <version>7.0.68</version>
+                            <outputDirectory>${project.build.directory}/csap-package-tomcat.secondary/tom7</outputDirectory>
+                            <destFileName>catalina-jmx-remote.jar</destFileName>
+                        </artifactItem>
+                         -->
+                        
+                    </artifactItems>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- dependencies> <dependency> <groupId>bin</groupId> <artifactId>tomcat</artifactId> 
+        <version>9.0.0.M22</version> <type>tar.gz</type> </dependency> <dependency> 
+        <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-catalina-jmx-remote</artifactId> 
+        <version>9.0.0.M3</version> </dependency> <dependency> <groupId>bin</groupId> 
+        <artifactId>tomcat</artifactId> <version>8.5.16</version> <type>tar.gz</type> 
+        </dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-catalina-jmx-remote</artifactId> 
+        <version>8.5.4</version> </dependency> <dependency> <groupId>bin</groupId> 
+        <artifactId>tomcat</artifactId> <version>8.0.35</version> <type>tar.gz</type> 
+        </dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-catalina-jmx-remote</artifactId> 
+        <version>8.0.32</version> </dependency> <dependency> <groupId>bin</groupId> 
+        <artifactId>tomcat</artifactId> <version>7.0.68</version> <type>tar.gz</type> 
+        </dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-catalina-jmx-remote</artifactId> 
+        <version>7.0.68</version> </dependency> </dependencies -->
+
+</project>

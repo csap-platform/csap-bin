@@ -1,0 +1,5 @@
+template poms: 'csap-package-java-secondary/pom.xml',
+    enableParentVersion: true,
+    enableVersion: true,
+    enableTag: true,
+    defaultTag: 'csap-package-java-secondary'
