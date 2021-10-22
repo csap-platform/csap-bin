@@ -10,14 +10,17 @@ source ~/.bashrc
 # externalDeploy <version> <file>
 #
 
+
+
+wget https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.12%2B7/OpenJDK11U-jdk_x64_linux_11.0.12_7.tar.gz
 #
 #  linux settings
 #
-mavenSettingsFile="$CSAP_FOLDER/conf/resources/settings.xml"
-mavenArtifactVersion=${1:-11.0.11_9} ;
-pathToJavaBinary=${2:-$HOME/OpenJDK11U-jdk_x64_linux_11.0.11_9.tar.gz} ;
-#mavenArtifactVersion=${1:-11.0.8_10} ;
-#pathToJavaBinary=${2:-$HOME/OpenJDK11U-jdk_x64_linux_11.0.8_10.tar.gz} ;
+mavenSettingsFile="$csapDefinitionResources/settings.xml"
+mavenArtifactVersion=${1:-11.0.12_7} ;
+pathToJavaBinary=${2:-/mnt/CSAP_DEV01_NFS/csap-web-server/java/OpenJDK11U-jdk_x64_linux_$mavenArtifactVersion.tar.gz} ;
+# mavenArtifactVersion=${1:-11.0.11_9} ;
+# pathToJavaBinary=${2:-$HOME/OpenJDK11U-jdk_x64_linux_11.0.11_9.tar.gz} ;
 
 
 

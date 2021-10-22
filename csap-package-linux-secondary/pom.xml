@@ -41,6 +41,14 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 							<outputDirectory>${project.build.directory}/csap-package-linux.secondary</outputDirectory>
 <!-- 							<destFileName>govc-0.21.0.gz</destFileName> -->
 						</artifactItem>
+						<artifactItem>
+							<groupId>bin</groupId>
+							<artifactId>helm</artifactId>
+							<version>3.7.0</version>
+							<type>gz</type>
+							<outputDirectory>${project.build.directory}/csap-package-linux.secondary</outputDirectory>
+<!-- 							<destFileName>govc-0.21.0.gz</destFileName> -->
+						</artifactItem>
 					</artifactItems>
 				</configuration>
 			</plugin>
