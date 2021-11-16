@@ -28,7 +28,7 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 						<artifactItem>
 							<groupId>bin</groupId>
 							<artifactId>csap-monitoring-specs</artifactId>
-							<version>21.06</version>
+							<version>21.10</version>
 							<type>zip</type>
 							<outputDirectory>${project.build.directory}/csap-package-monitoring.secondary</outputDirectory>
 						</artifactItem>
